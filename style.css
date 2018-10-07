@@ -15,17 +15,13 @@ ul.navbar {
             top: 2em;
             left: 1em;
             width: 9em }
-
 ul.navbar li:hover{
               background: orange }
-
 ul.navbar li {
               background: white;
               margin: 0.5em 0;
               padding: 0.3em;
               border-right: 1em solid black }
-
-
 
 ul.navbar a {
               text-decoration: none }
