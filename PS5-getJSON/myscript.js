@@ -13,6 +13,7 @@ $(document).ready(function(){
                    table_items.push(value.fields.Type);
                    table_items.push(value.fields.District);
                    table_items.push(value.fields.Location);
+                
                    table_dataSet.push(table_items);
                    console.log(table_items);
             }); // end .each
@@ -34,7 +35,8 @@ $(document).ready(function(){
                    defaultContent:""},
 
           ]
-      });
+      });//end data table
+
     });//end.getJSON
 
   });//end button
