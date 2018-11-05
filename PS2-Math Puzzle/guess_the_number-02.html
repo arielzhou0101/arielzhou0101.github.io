@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Guess The Number!</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!--link rel="stylesheet" href="style.css"-->
+<style>
+        .content {width: 500px;
+          background: #fff;
+          padding: 20px;
+          padding-top: 100px;
+          font-family: calibri;
+          font-size: 18px;
+          color: #444;
+          margin: 0 auto;
+          text-align: center;
+          }
+</style>
+
+<script>
+
+//get a random number named Randnum
+function Random(min, max) {
+    return Math.round(Math.random() * (max - min)) + min;
+    }
+var num = Random(1,100);//取一个[1，100]的随机数
+ var timer = 10;
+ function check() {
+  
+  var x = document.getElementById("inputNumber").value;//x为输入的值
+
+  
+  while (timer > 0) {
+    
+
+      if (x == "" || x < 1 || x > 100) {
+          var content = document.getElementById("demo"); 
+          content.style.fontSize = "25px"; 
+          content.style.color = "red"; 
+          document.getElementById("demo").innerHTML = "Imput not valid";
+          break;
+      }else{
+      timer--;
+      if (x == num) {
+          var content = document.getElementById("demo"); 
+          content.style.fontSize = "25px"; 
+          content.style.color = "green"; 
+          document.getElementById("demo").innerHTML = "Congratulations! You had it right.";
+          break;
+      }
+      
+      if (x > num) {
+          if (timer == 0) {
+            var content = document.getElementById("demo"); 
+            content.style.fontSize = "25px"; 
+            content.style.color = "red"; 
+            document.getElementById("demo").innerHTML = "Sorry, you've run out of chances!";
+            break;
+          }else{
+            var content = document.getElementById("demo"); 
+            content.style.fontSize = "25px"; 
+            content.style.color = "navy"; 
+            document.getElementById("demo").innerHTML = "Try something smaller! You have " + timer + " chances left.<br>";
+             break;
+          }
+      }
+
+      if (x < num) {
+          if (timer == 0) {
+            var content = document.getElementById("demo"); 
+            content.style.fontSize = "25px"; 
+            content.style.color = "red"; 
+            document.getElementById("demo").innerHTML = "Sorry, you've run out of chances!";
+             break;
+          }else{
+            var content = document.getElementById("demo"); 
+            content.style.fontSize = "25px"; 
+            content.style.color = "navy"; 
+            document.getElementById("demo").innerHTML = "Try something larger! You have " + timer + " chances left.<br>";
+             break;
+            }
+          }
+
+
+      
+        }
+      }
+}
+
+
+</script>
+</head>
+
+<body>
+<div class = "content">
+  <h1>Number Game!</h1>
+
+  <p>I have a random integer between 1 and 100.<br> Can you guess it right? <br></p>
+
+  <p id="demo">You have ten chances to try!<br></p>
+
+  <form id="myform">
+    <label>Enter in the box:</label><br>
+    <input type="number" id="inputNumber"><br/>
+  </form>
+
+  <button type="button" class="btn btn-primary" onclick="check();">Submit</button>
+</div>
+
+</body>
+</html>
