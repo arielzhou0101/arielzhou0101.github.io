@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+
+    <title>Discover HK with me!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Custom-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!--New-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    <script src='scriptlib.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!--Map-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+
+   <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+
+
+</head>
+
+<body id="page-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-15 col-sm-15 col md-15">
+
+        <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+<h1>Hi, welcome to explore HK with me</h1>
+<!-- Icon Cards-->
+          <h3>Here are some useful links :)</h3>
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-primary o-hidden h-100">
+                <div class="card-body">
+                  <div class="mr-5">香港旅遊發展局</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="http://www.discoverhongkong.com/tc/index.jsp">
+                  <span class="float-left">Explore</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-warning o-hidden h-100">
+                <div class="card-body">
+                  <div class="mr-5">Lonely Planet HK</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="https://www.lonelyplanet.com/china/hong-kong">
+                  <span class="float-left">Explore</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-success o-hidden h-100">
+                <div class="card-body">
+                  <div class="mr-5">馬蜂窩-香港攻略</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="http://www.mafengwo.cn/travel-scenic-spot/mafengwo/10189.html">
+                  <span class="float-left">Explore</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-danger o-hidden h-100">
+                <div class="card-body">
+
+                  <div class="mr-5">Timeable HK</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="http://timable.com/en/">
+                  <span class="float-left">View Details</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+<!--datatable-->
+<h3>Please click on the button to get my personal HK fun list.</h3>
+<button type="button" class="btn btn-warning" id='roll_up1'>Get Ariel's HK Fun list</button><br>
+<div class="table-responsive">
+      <table id="table" width="100%" class="table table-bordered"></table>
+      <script src='myscript.js'></script>
+</div>
+
+<!--Map-->
+  <h3>Map View</h3>
+  <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
+  <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+  </div>
+
+  <script>
+
+    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+
+    var map = L.map('map')
+        .addLayer(mapboxTiles)
+        .setView([22.2793,114.2060], 10);
+
+//getJSON
+    var items = [];
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appIu3c25BoxmZamM/places?api_key=keyWe7rvHMqQuDgB0";
+    var data = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+         $.each(result.records, function(key,value) {
+             items = {};
+                 items["name"] = value.fields.Name;
+                 items["url"] = value.fields.url;
+                 items["image_url"] = value.fields.image_url;
+                 items["latitud"] = value.fields.Lat;
+                 items["longitud"] = value.fields.Lng;
+                 data.push(items);
+                 console.log(items);
+          }); // end .each
+        }); // end getJSON
+  </script>
+
+  <script>
+  //show_districts
+        function show_districts(){
+        for (var i in data) {
+        var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+        L.marker( latlng )
+        .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+        .addTo(map);
+    }
+  }
+
+    </script>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
