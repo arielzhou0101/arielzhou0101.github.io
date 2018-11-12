@@ -29,11 +29,13 @@
 
    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 
+   <!--Background-->
+   <script src="jquery.backstretch.min.js"></script>
 
 </head>
 
 <body id="page-top">
-  <div class="container">
+    <div class="container" style="height: 100%; background-color: rgba(255,255,255,0.9);" >
     <div class="row">
       <div class="col-xs-15 col-sm-15 col md-15">
 
@@ -41,7 +43,32 @@
 
         <div class="container-fluid">
 
-<h1>Hi, welcome to explore HK with me</h1>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">Welcome to explore HK with me!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="map.html">Map View <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="table.html">Table</a>
+                <a class="nav-item nav-link" href="card_links.html">Useful Links
+                <a class="nav-item nav-link disabled" href="#">/</a>
+              </div>
+            </div>
+</nav>
+
+
+<!--background slide-->
+<script>
+        $.backstretch([
+              "bg1.jpg",
+              "bg2.jpg",
+              "bg3.jpg",
+              "bg4.jpg"
+          ], {duration: 3000, fade: 750});
+</script>
+
 <!-- Icon Cards-->
           <h3>Here are some useful links :)</h3>
           <div class="row">
@@ -100,58 +127,6 @@
             </div>
           </div>
 
-<!--datatable-->
-<h3>Please click on the button to get my personal HK fun list.</h3>
-<button type="button" class="btn btn-warning" id='roll_up1'>Get Ariel's HK Fun list</button><br>
-<div class="table-responsive">
-      <table id="table" width="100%" class="table table-bordered"></table>
-      <script src='myscript.js'></script>
-</div>
-
-<!--Map-->
-  <h3>Map View</h3>
-  <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
-  <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
-  </div>
-
-  <script>
-
-    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
-
-    var map = L.map('map')
-        .addLayer(mapboxTiles)
-        .setView([22.2793,114.2060], 10);
-
-//getJSON
-    var items = [];
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appIu3c25BoxmZamM/places?api_key=keyWe7rvHMqQuDgB0";
-    var data = [];
-        $.getJSON(airtable_read_endpoint, function(result) {
-         $.each(result.records, function(key,value) {
-             items = {};
-                 items["name"] = value.fields.Name;
-                 items["url"] = value.fields.url;
-                 items["image_url"] = value.fields.image_url;
-                 items["latitud"] = value.fields.Lat;
-                 items["longitud"] = value.fields.Lng;
-                 data.push(items);
-                 console.log(items);
-          }); // end .each
-        }); // end getJSON
-  </script>
-
-  <script>
-  //show_districts
-        function show_districts(){
-        for (var i in data) {
-        var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
-        L.marker( latlng )
-        .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
-        .addTo(map);
-    }
-  }
-
-    </script>
 
 
             </div>
