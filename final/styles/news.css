@@ -114,7 +114,7 @@ p a:hover::after
 }
 p::selection
 {
-	
+
 }
 h1{font-size: 48px;}
 h2{font-size: 36px;}
@@ -128,14 +128,14 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
 h6::selection
 {
-	
+
 }
 .form-control
 {
@@ -438,7 +438,7 @@ section
 }
 .menu_logo a img
 {
-	
+
 }
 .menu_logo .logo_text,
 .menu_logo .logo_sub
@@ -818,7 +818,7 @@ section
 
 .sidebar
 {
-	width: 100%;	
+	width: 100%;
 }
 .sidebar_top_search_form
 {
@@ -864,9 +864,9 @@ section
 	font-weight: 400 !important;
 	font-style: italic;
 	color: #828282 !important;
-} 
+}
 .sidebar_top_search_input:-ms-input-placeholder
-{ 
+{
 	font-size: 12px !important;
 	font-weight: 400 !important;
 	font-style: italic;
@@ -1107,9 +1107,9 @@ section
 	font-size: 13px !important;
 	font-weight: 400 !important;
 	color: #6b6b6b !important;
-} 
+}
 .sidebar_search_input:-ms-input-placeholder
-{ 
+{
 	font-size: 13px !important;
 	font-weight: 400 !important;
 	color: #6b6b6b !important;
@@ -1173,7 +1173,7 @@ section
 }
 .search_form_button
 {
-	
+
 }
 .search_form_button_2
 {
@@ -1222,7 +1222,7 @@ section
 }
 .newsletter_content
 {
-	
+
 }
 .newsletter_form_container
 {
@@ -1265,9 +1265,9 @@ section
 	font-weight: 400 !important;
 	font-style: italic;
 	color: #828282 !important;
-} 
+}
 .newsletter_input:-ms-input-placeholder
-{ 
+{
 	font-size: 11px !important;
 	font-weight: 400 !important;
 	font-style: italic;
@@ -1306,7 +1306,6 @@ section
 /*********************************
 10. Footer
 *********************************/
-
 .footer
 {
 	width: 100%;
@@ -1315,8 +1314,8 @@ section
 {
 	width: 100%;
 	background: #3f6fce;
-	padding-top: 80px;
-	padding-bottom: 72px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 .footer_about_text
 {
@@ -1395,7 +1394,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #828282;
+	color: #FFFFFF;
 }
 .footer_nav
 {
