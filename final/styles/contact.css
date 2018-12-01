@@ -550,7 +550,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 600;
-	color: #FFFFFF;
+	color: hsl(0,0%,20%);
 	line-height: 0.75;
 }
 .breadcrumbs ul
