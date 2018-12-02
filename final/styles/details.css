@@ -11,8 +11,8 @@
 4. Menu
 5. Home
 6. Home Search
-7. Contact
-8. Map
+7. About
+8. Realtors
 9. Newsletter
 10. Footer
 
@@ -29,6 +29,28 @@
 /*********************************
 2. Body and some general stuff
 *********************************/
+.clickable
+{
+
+}
+
+.area
+{
+
+}
+
+.area_title
+{
+	color: black;
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 20px;
+}
+
+.realtors_row1
+{
+	margin-top: 23px;
+}
 
 *
 {
@@ -62,8 +84,8 @@ ul
 p
 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 14px;
-	line-height: 2.1428;
+	font-size: 15px;
+	line-height: 1.8666;
 	font-weight: 500;
 	color: #838383;
 	-webkit-font-smoothing: antialiased;
@@ -550,7 +572,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 600;
-	color: hsl(0,0%,20%);
+	color: #FFFFFF;
 	line-height: 0.75;
 }
 .breadcrumbs ul
@@ -685,149 +707,206 @@ section
 }
 
 /*********************************
-7. Contact
+7. About
 *********************************/
 
-.contact
+.about
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 119px;
-	padding-bottom: 105px;
+	padding-top: 91px;
+	padding-bottom: 100px;
 }
-.contact .section_title
+.about_content
 {
-	font-weight: 700;
+	padding-top: 16px;
+	padding-right: 10px;
 }
-.contact_info_text
+.about_text
 {
-	margin-top: 42px;
+	margin-top: 55px;
 }
-.contact_info_content
+.about_image
 {
-	margin-top: 50px;
-	padding-right: 170px;
+	width: 100%;
 }
-.contact_info_list li
+.about_image img
 {
-	font-size: 14px;
+	max-width: 100%;
+}
+.milestones_row
+{
+	margin-top: 91px;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	height: 74px;
+	width: 73px;
+}
+.milestone_icon img
+{
+	max-width: 100%;
+}
+.milestone_content
+{
+	padding-left: 22px;
+}
+.milestone_counter
+{
+	font-size: 30px;
+	font-weight: 500;
+	color: #282828;
+	line-height: 0.75;
+}
+.milestone_text
+{
+	font-size: 18px;
 	font-weight: 500;
 	color: #828282;
-}
-.contact_info_list li:not(:last-child)
-{
-	margin-bottom: 23px;
-}
-.contact_info_list li > div:first-child
-{
-	color: #3f6fce;
-}
-.contact_form_container
-{
-
-}
-.contact_form
-{
-	display: block;
-	position: relative;
-	width: 100%;
-}
-.contact_form > div:not(:last-child)
-{
-	margin-bottom: 17px;
-}
-.contact_input
-{
-	width: 100%;
-	height: 48px;
-	background: #f1f6f9;
-	border-radius: 24px;
-	padding-left: 38px;
-	border: none;
-	outline: none;
-}
-.contact_textarea
-{
-	height: 153px;
-	padding-top: 17px;
-}
-.contact_input::-webkit-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #838383 !important;
-}
-.contact_input:-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #838383 !important;
-}
-.contact_input::-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #838383 !important;
-}
-.contact_input:-ms-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #838383 !important;
-}
-.contact_input::input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #838383 !important;
-}
-.contact_button
-{
-	border: none;
-	outline: none;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 700;
-	color: #FFFFFF;
-	cursor: pointer;
-	margin-top: 10px;
+	margin-top: 12px;
+	line-height: 1.2;
 }
 
 /*********************************
-8. Map
+8. Realtors
 *********************************/
+.green_section
+{
+	width: 100%;
+	background: #e8f1ef;
+	padding-top: 105px;
+	padding-bottom: 74px;
+}
 
-.contact_map
+.realtors
 {
 	width: 100%;
-	height: 754px;
+	background: #f0f2f7;
+	padding-top: 105px;
+	padding-bottom: 74px;
 }
-.map
+.realtors_row
+{
+	margin-top: 63px;
+}
+.realtor
+{
+	width: 100%;
+	background: #FFFFFF;
+	z-index: 2;
+	margin-bottom: 58px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.realtor_outer:hover .realtor
+{
+	box-shadow: 0px 13px 27px rgba(0,0,0,0.28);
+}
+.realtor_image
+{
+	width: 100%;
+}
+.realtor_image img
+{
+	max-width: 100%;
+}
+.realtor_body
+{
+	padding-top: 23px;
+	padding-bottom: 41px;
+	text-align: center;
+}
+.realtor_title
+{
+	font-size: 18px;
+	font-weight: 600;
+	color: #282828;
+}
+.realtor_subtitle
+{
+	font-size: 14px;
+	font-weight: 400;
+	color: #828282;
+	margin-top: -1px;
+}
+.realtor_link
+{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: -29px;
+	width: 46px;
+	height: 57px;
+	background: linear-gradient(to right, #c7ccd7, #c7ccd7);
+	border-radius: 23px;
+	text-align: center;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.realtor_link a
+{
+	display: block;
+	line-height: 57px;
+	font-size: 30px;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+.realtor_link_background_container
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 1;
+}
+.realtor_link_background_container > div
 {
 	width: 100%;
 	height: 100%;
 }
-.google_map
+.realtor_link_background
 {
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: -29px;
+	width: 46px;
+	height: 57px;
+	background: #c7ccd7;
+	border-radius: 23px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
-.map_container
+.realtor_outer:hover .realtor_link_background
 {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	box-shadow: 0px 20px 21px rgba(0,0,0,0.25);
 }
-#map
+.realtor_outer:hover .realtor_link
 {
-	width: 100%;
-	height: calc(100% + 30px);
+	background: linear-gradient(to right, #487fee, #32fa95);
 }
 
 /*********************************
@@ -937,137 +1016,4 @@ section
 {
 	outline: none;
 	border: none;
-}
-
-/*********************************
-10. Footer
-*********************************/
-
-.footer
-{
-	width: 100%;
-}
-.footer_main
-{
-	width: 100%;
-	background: #3f6fce;
-	padding-top: 7px;
-	padding-bottom: 7px;
-}
-.footer_about_text
-{
-	font-size: 12px;
-	font-weight: 500;
-	font-style: italic;
-	color: #FFFFFF;
-	margin-top: 39px;
-}
-.footer_title
-{
-	font-size: 18px;
-	font-weight: 500;
-	color: #FFFFFF;
-}
-.footer_latest
-{
-	padding-top: 40px;
-}
-.footer_latest_image
-{
-	width: 86px;
-	height: 86px;
-}
-.footer_latest_image img
-{
-	max-width: 100%;
-}
-.footer_latest_content
-{
-	padding-left: 17px;
-}
-.footer_latest_location
-{
-	font-size: 11px;
-	font-weight: 400;
-	color: #FFFFFF;
-	line-height: 0.75;
-}
-.footer_latest_name
-{
-	margin-top: 8px;
-}
-.footer_latest_name a
-{
-	font-size: 16px;
-	font-weight: 400;
-	color: #FFFFFF;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.footer_latest_name a:hover
-{
-	color: #32f996;
-}
-.footer_latest_price
-{
-	font-size: 14px;
-	font-weight: 600;
-	color: #32f996;
-	margin-top: 7px;
-}
-.footer_bar
-{
-	width: 100%;
-	background: #FFFFFF;
-}
-.footer_bar_content
-{
-	height: 97px;
-}
-.cr
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #FFFFFF;
-}
-.footer_nav
-{
-	margin-left: 170px;
-}
-.footer_nav ul li
-{
-	display: inline-block;
-}
-.footer_nav ul li:not(:last-child)
-{
-	margin-right: 47px;
-}
-.footer_nav ul li a
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #828282;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.footer_nav ul li a:hover
-{
-	color: #32f996;
-}
-.footer_phone
-{
-	font-size: 14px;
-	color: #828282;
-	font-weight: 500;
-}
-.footer_phone span
-{
-	text-transform: uppercase;
-	font-weight: 600;
 }
