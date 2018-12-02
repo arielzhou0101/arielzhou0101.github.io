@@ -31,8 +31,27 @@
 *********************************/
 .clickable
 {
-	
+
 }
+
+.area
+{
+
+}
+
+.area_title
+{
+	color: black;
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 20px;
+}
+
+.realtors_row1
+{
+	margin-top: 23px;
+}
+
 *
 {
 	margin: 0;
