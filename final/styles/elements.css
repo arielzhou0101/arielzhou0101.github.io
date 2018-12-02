@@ -28,10 +28,22 @@
 /*********************************
 2. Body and some general stuff
 *********************************/
+.title_background
+{
+background-color: #d9e3ff;
+}
+
+
+
 .elements_title
 {
-	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	color: #406fcd;
+	line-height: 0.75;
+	margin:10px;
 }
+
 *
 {
 	margin: 0;
@@ -699,18 +711,10 @@ section
 	padding-top: 105px;
 	padding-bottom: 105px;
 }
-.elements_title
-{
-	font-size: 30px;
-	font-weight: 700;
-	color: #252525;
-	line-height: 0.75;
-}
 
 /*********************************
 7.1 Elements - Buttons
 *********************************/
-
 .buttons
 {
 	width: 100%;
