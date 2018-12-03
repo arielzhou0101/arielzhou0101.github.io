@@ -26,9 +26,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/elements.css">
+<link rel="stylesheet" type="text/css" href="styles/elements_responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/details.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
@@ -144,14 +143,16 @@
 						<div class="realtor">
 							<div class="realtor_image"><img src="images/discovery_bay/ddeck.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">愉景湾 D Deck</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                <!--按钮-->
+                          <div class="accordion_container">
+                            <div class="accordion d-flex flex-row align-items-center"><div>D'Deck</div></div>
+                            <div class="accordion_panel">
+                              <div>
+                                <p>这个全香港最大的临海露天美食区，基本上就是一个美食军团，无论是想吃法国菜、意大利菜、泰国菜、日料还是西班牙小吃，甚至三明治等轻食，在这里都可以找到对口味的餐馆。随美食附送的是大白湾的美丽海景，晚上则免费加赠迪士尼乐园的璀璨烟花。如果在13间指定的D'Deck餐厅消费满120港币,还可以免费乘坐当日渡轮返回中环。</p>
+                              </div>
+                            </div>
+                          </div>
+        </div></div></div></div></div></div></div>
 
 	<!-- 景点 -->
 
@@ -172,11 +173,16 @@
 						<div class="realtor">
 							<div class="realtor_image"><img src="images/discovery_bay/chapel.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">愉景北海滨礼堂</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <!--按钮-->
+                          <div class="accordion_container">
+                            <div class="accordion d-flex flex-row align-items-center"><div>北海滨礼堂</div></div>
+                            <div class="accordion_panel">
+                              <div>
+                                <p>日落黄昏之时，记得要前来这座浪漫的白色教堂。这座全港首间海滨白教堂位于愉景北商场旁边，呈对称的三角形，混合了大量玻璃元素。大部分的墙身均为落地大玻璃，所以在教堂内外亦可饱览海湾景色。内部更会有自然光射进，整体感觉温馨而浪漫，适合与另一半一同前来。</p>
+                              </div>
+                            </div>
+                          </div>
+        </div></div></div></div>
 
 				<!-- grids -->
 				<div class="col-lg-3 col-md-6">
@@ -184,12 +190,16 @@
 						<div class="realtor">
 							<div class="realtor_image"><img src="images/discovery_bay/dabaiwanshatan.jpg" alt=""></div>
 							<div class="realtor_body">
-								<div class="realtor_title">大白湾沙滩</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+                <!--按钮-->
+                          <div class="accordion_container">
+                            <div class="accordion d-flex flex-row align-items-center"><div>大白湾沙滩</div></div>
+                            <div class="accordion_panel">
+                              <div>
+                                <p>愉景湾沙滩，即大白湾沙滩，优势就是“静中带旺”，除游水晒太阳以外，多数人都会在沙滩上进行各式活动，沙滩排球、玩飞碟等等。愉景湾更经常都会在沙滩上举办不同活动，如市集、节日活动等，多姿多采。</p>
+                              </div>
+                            </div>
+                          </div>
+        </div></div></div></div>
 
 			</div>
 		</div>
@@ -239,7 +249,7 @@
 
 	<!--transportation-->
 	<div class="horizontal">
-			<div class="realtors">
+			<div class="green_section">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -254,7 +264,7 @@
 		</div>
 
 	</div>
-
+</div>
 
 </div> <!--end of super_container-->
 
@@ -283,9 +293,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/jquery-circle-progress-1.2.2/circle-progress.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/elements.js"></script>
 </body>
 </html>
