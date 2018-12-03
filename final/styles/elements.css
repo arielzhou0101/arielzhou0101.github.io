@@ -28,18 +28,12 @@
 /*********************************
 2. Body and some general stuff
 *********************************/
-.title_background
-{
-background-color: #d9e3ff;
-}
-
-
 
 .elements_title
 {
-	font-size: 30px;
+	font-size: 50px;
 	font-weight: 700;
-	color: #406fcd;
+	color: #ffffff;
 	line-height: 0.75;
 	margin:10px;
 }
